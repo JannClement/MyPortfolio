@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nicomoji.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+  --blkcolor: #151313;
+  --whtcolor: #d2cbcb;
+  ---accent: #2A3957;
+  --ff1:  'Inter';
+  --ff2: 'Nico Moji';
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  scroll-behavior: smooth; 
+  cursor: none;
+  font-family: var(--ff2);
+  font-size: 10.5px;
+  background-color: #151313;
+  color: #fff6f6;
+}
+.marginspace{
+  margin: 0px 50px;
+}
+/* navigation bar */
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 15px 0px;
+}
+#my-logo{
+  font-size: 30px;
+}
+nav ul li{
+  padding: 12px 5px ; 
+  display: inline;  
+}
+ul{
+   padding: 12px 0px ; 
+   /*center yung unordered list */
+}
+a{color: var(--whtcolor); text-decoration: none;}a:hover{color: var(---accent);}
+
+/* dito yung title sa gitna */
+#title{
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.titlesvg{
+  min-width: 200px;
+}
+/* dito yung place name date sa baba*/
+#placenamedate{
+  margin: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contplacenamedate  {
+  text-align: center;
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 700px) {
+  #placenamedate{
+    justify-content: center;
+  }
+  .contplace{
+    display: none;
+  }
+  .contdate{
+    display: none;
+  }
+  .cardabt{
+    margin-left: 0;
+  }
+}
+/* works/projects */
+#work{
+  margin-top: 120px;
+  margin-bottom: 25px;
+}
+#top-specialization{
+  text-align: right;
+  padding-bottom: 30px;
+}
+#card-cont{
+  border: 1px solid;
+  padding: 15px;
+}
+.card {
+  background-color: var(--whtcolor);
+  color: var(--whtcolor);
+  padding: 1rem;
+  height: 11rem;
+  transition: opacity 0.6s ease;
+  border-radius: 6px;  
+}
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+.cards:hover> :not(:hover) {
+  color: var(---accent);
+  opacity: 0.4;
+}
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* specialize */
+#cont-specialize{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--whtcolor);
+  color: var(---accent);
+  padding: 32px 24px;
+  font-size: 12px;
+}
+#tools{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#tools p{
+  padding: 5px;
+}
+/* footer */
+footer{
+  padding: 12px 0px;
+}
+#footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 18px 0px;
+}
+.big-font{
+  font-size: 30px;
+}
+.links{
+  padding-top: 20px;
+  word-spacing: 2px;
+}
+.links a, .my-links a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  word-spacing: 8px;
+}
+.links a:hover{
+  color: #606265;
+}
+hr.solid {
+  margin: 16px 0px 16px 0px;
+  border-top: 1px solid #fff;
+}
+.credits{
+  text-align: right;
+  font-family: var(--ff1);
+  line-height: 1.9;
+}
+/* about page */
+#abtcont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 2rem 0;
+}
+.abttopspace{
+  margin-top: 2rem;
+}
+.contabt{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+.cardabt{
+  border: 0.7px var(--whtcolor) solid;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 18px;
+  line-height: 1.3;
+}
+@media only screen and (max-width: 700px) {
+  .contabt{
+    flex-wrap: wrap;
+  }
+} 
+.thatsme{
+  width: 300px;
+  height: 176px;
+  opacity: 0.6;
+}
+#btnplace{
+  display: flex;
+  justify-content: start;
+  margin-top: 15px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    margin-right: 12px;
+    background-color: #777a7d;
+    color: var(--whtcolor);
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.btn:hover{
+  background-color: var(--whtcolor);
+  color: var(---accent);
+}

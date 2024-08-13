@@ -1,0 +1,183 @@
+/* cursor */
+.circle{
+  aspect-ratio: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  filter: blur(0.01vmax);
+  height: 30px; 
+  pointer-events: none;
+  z-index: 99999; /* so that it stays on top of all other elements */
+}
+/* atom animation */
+  .cursor{
+    background-color: #ff0000; 
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    transition: transform .3s ease;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .grow, .grow-shrink{
+    transform: scale(6);
+    background-color: #fafbff;
+    mix-blend-mode: difference;
+    border: none;
+  }
+  .grow-shrink{
+    transform: scale(3.5);
+  }
+/* data ainmation */
+[data-animation="fade-up"]{ 
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity .5s ease-in-out,transform 0.8s ease-in-out;
+}
+[data-animation="fade-up"].fade-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* animation delay sa header */
+.animate-delay{
+  animation: navAnimation 0.5s ease-in-out forwards;
+  animation-delay: 5.3s;
+  opacity: 0;
+}
+@keyframes navAnimation {
+  from {
+  opacity: 0;
+  transform: translateY(50px);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+/* arrow */
+#arrow{
+  position: relative;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
+  .jannclement {
+        white-space: nowrap;
+        font-size: 20px;
+        position: absolute;
+        left: 35%;
+        top: 50%;
+  }
+  .jannclement::after {
+        content: "";
+        animation: abomination1 4.9s linear 1;
+  }
+  @keyframes abomination1 {
+        0% {
+          content: " ";
+        }
+        2% {
+          content: "H";
+        }
+        4% {
+          content: "He";
+        }
+        8% {
+          content: "Hey";
+        }
+        12% {
+          content: "Hey,  ";
+        }
+        16% {
+          content: "Hey, I";
+        }
+        20% {
+          content: "Hey, I'";
+        }
+        24% {
+          content: "Hey, I'm ";
+        }
+        28% {
+          content: "Hey, I'm J";
+        }
+        32% {
+          content: "Hey, I'm Ja";
+        }
+        36% {
+          content: "Hey, I'm Jan";
+        }
+        40% {
+          content: "Hey, I'm Jann";
+        }
+        44% {
+          content: "Hey, I'm Jann ";
+        }
+        48% {
+          content: "Hey, I'm Jann C";
+        }
+        52% {
+          content: "Hey, I'm Jann Cl";
+        }
+        56% {
+          content: "Hey, I'm Jann Cle";
+        }
+        60% {
+          content: "Hey, I'm Jann Clem";
+        }
+        64% {
+          content: "Hey, I'm Jann Clem";
+        }
+        68% {
+          content: "Hey, I'm Jann Cleme";
+        }
+        72% {
+          content: "Hey, I'm Jann Clemen";
+        }
+        76% {
+          content: "Hey, I'm Jann Clement";
+        }
+        80% {
+          content: "Hey, I'm Jann Clement ";
+        }
+        84% {
+          content: "Hey, I'm Jann Clement A";
+        }
+        88% {
+          content: "Hey, I'm Jann Clement An";
+        }
+        92% {
+          content: "Hey, I'm Jann Clement And";
+        }
+        94% {
+          content: "Hey, I'm Jann Clement Andr";
+        }
+        94% {
+          content: "Hey, I'm Jann Clement Andre";
+        }
+        100% {
+          content: "Hey, I'm Jann Clement Andres";
+        }
+        to {
+          display: none;
+        }
+  }
+  @media only screen and (max-width: 700px) {
+        .jannclement{
+          font-size: 15px; 
+          left: 12%;
+        }
+  }
